@@ -1,0 +1,19 @@
+
+.weather-list {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  
+    h3 {
+      margin: 20px 0 10px;
+      color: lighten($primary-color, 10%);
+      font-size: 1.8rem;
+    }
+  
+    .weather-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+    }
+  }
+  
