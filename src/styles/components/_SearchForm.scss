@@ -6,7 +6,7 @@
     input[type="text"] {
       padding: 10px;
       border: none;
-      border-radius: $border-radius;
+   
       width: 200px;
       @include transition(box-shadow);
   
@@ -21,7 +21,7 @@
       background-color: $accent-color;
       color: #fff;
       border: none;
-      border-radius: $border-radius;
+   
       font-weight: bold;
       cursor: pointer;
       @include transition(background-color);

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import SearchForm from "./components/SearchForm/SearchForm";
 import WeatherList from "./components/WeatherList/WeatherList";
@@ -10,14 +9,12 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  //funcion para realizar peticion a la api
-  
   const fetchWeather = async (cityName) => {
     setLoading(true);
     setError(null);
 
     try {
-      const apiKey = import.meta.env.VITE_API_KEY; 
+      const apiKey = import.meta.env.VITE_API_KEY;
       const response = await fetch(
         `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&appid=${apiKey}`
       );
@@ -40,16 +37,22 @@ const App = () => {
   };
 
   useEffect(() => {
-    fetchWeather(city); // Llama a la API cuando se cambie la ciudad
+    fetchWeather(city);
   }, [city]);
 
   const handleCityChange = (newCity) => {
-    setCity(newCity); // Cambia la ciudad seleccionada
+    setCity(newCity);
   };
 
   return (
     <div>
-      <h1>Chamba del tiempo</h1>
+      <header className="app-header">
+        <div className="weather-icons">
+          <span className="icon sun">☀️</span>
+          <span className="icon snow">❄️</span>
+          <span className="icon storm">⛈️</span>
+        </div>
+      </header>
       <SearchForm onCityChange={handleCityChange} />
       {loading && <p>Loading...</p>}
       {error && <p style={{ color: "red" }}>Error: {error}</p>}

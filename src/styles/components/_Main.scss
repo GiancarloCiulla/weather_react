@@ -1,15 +1,15 @@
 // Importación de los estilos de los componentes
-@import '../utils/searchForm';
-@import '../utils/weatherCard';
-@import '../utils/weatherList';
+@import '../components/SearchForm';
+@import '../components/weatherCard';
+@import '../components/weatherList';
 
 // Variables globales y Mixins
-$primary-color: #4b79a1; 
-$secondary-color: #283e51; 
-$accent-color: #f4b41a; 
-$background-color: #f0f4f8; 
-$text-color: #333; 
-$border-radius: 8px; 
+// $primary-color: #4b79a1; 
+// $secondary-color: #283e51; 
+// $accent-color: #f4b41a; 
+// $background-color: #f0f4f8; 
+// $text-color: #333; 
+// $border-radius: 8px; 
 
 @mixin flex-center {
   display: flex;
