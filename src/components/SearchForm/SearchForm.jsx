@@ -8,7 +8,7 @@ const SearchForm = ({ onCityChange }) => {
     e.preventDefault();
     if (inputValue.trim()) {
       onCityChange(inputValue);
-      setInputValue(""); // Limpia el input
+      setInputValue(""); 
     }
   };
 
